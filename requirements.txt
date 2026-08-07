@@ -3,10 +3,4 @@ pandas
 numpy
 scikit-learn
 plotly
-joblib
-xgboost
-<<<<<<< HEAD
-shap
-=======
-shap
->>>>>>> 1f1fde9 (Add requirements.txt)
+groq
