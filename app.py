@@ -102,54 +102,7 @@ if page == "🏠 App":
     - Real-time Insights  
     """)
 
-# ================================
-# 🔍 PREDICT FRAUD
-# ================================
-elif page == "🔍 Predict Fraud":
-    st.title("🔍 Fraud Prediction")
 
-    st.markdown("Enter transaction details:")
 
-    amount = st.number_input("Transaction Amount", min_value=0.0)
-    time = st.number_input("Transaction Time", min_value=0.0)
 
-    if st.button("Predict"):
-        # Dummy prediction logic (replace with your model)
-        if amount > 1000:
-            st.error("🚨 Fraud Detected!")
-        else:
-            st.success("✅ Legit Transaction")
 
-# ================================
-# 📊 MODEL PERFORMANCE
-# ================================
-elif page == "📊 Model Performance":
-    st.title("📊 Model Performance")
-
-    data = pd.DataFrame({
-        "Metric": ["Accuracy", "Precision", "Recall", "F1 Score"],
-        "Score": [0.95, 0.92, 0.91, 0.93]
-    })
-
-    fig = px.bar(data, x="Metric", y="Score", title="Model Metrics")
-    st.plotly_chart(fig, use_container_width=True)
-
-# ================================
-# 💰 FINANCIAL IMPACT
-# ================================
-elif page == "💰 Financial Impact":
-    st.title("💰 Financial Impact")
-
-    col1, col2, col3 = st.columns(3)
-
-    col1.metric("💰 Money Saved", "₹12.5 Lakhs", "+10%")
-    col2.metric("🚫 Fraud Prevented", "3,500", "+15%")
-    col3.metric("📉 Risk Reduction", "35%", "+5%")
-
-    data = pd.DataFrame({
-        "Category": ["Fraud Loss Prevented", "Operational Cost"],
-        "Amount": [1250000, 300000]
-    })
-
-    fig = px.pie(data, names="Category", values="Amount", title="Financial Overview")
-    st.plotly_chart(fig, use_container_width=True)
