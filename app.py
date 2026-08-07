@@ -33,7 +33,7 @@ st.sidebar.title("🛡️ Fraud System")
 
 page = st.sidebar.radio(
     "Navigation",
-    ["🏠 App", "🔍 Predict Fraud", "📊 Model Performance", "💰 Financial Impact"]
+    ["🏠 App"]
 )
 
 # ================================
